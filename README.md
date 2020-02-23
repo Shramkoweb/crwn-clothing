@@ -1,3 +1,4 @@
+Demo: https://crwn-shop.netlify.com/
 # Used technologies
 
 Build a massive E-commerce app with Redux, Hooks, GraphQL, ContextAPI, Stripe, Firebase:
