@@ -1,7 +1,7 @@
 import React from 'react';
-import CollectionPreview from "../../components/collection-preview/collection-preview.component";
 
-import SHOP_DATA from "../../shop-data";
+import SHOP_DATA from '../../shop-data';
+import CollectionPreview from '../../components/collection-preview/collection-preview.component';
 
 class Shop extends React.PureComponent {
   constructor(props) {
@@ -9,19 +9,20 @@ class Shop extends React.PureComponent {
 
     this.state = {
       collections: SHOP_DATA
-    }
+    };
   }
 
   render() {
-    const {collections} = this.state;
+    const { collections } = this.state;
 
     return (
       <div className='shop-page'>
         {
-          collections.map(({id, ...otherCollectionsProps}) => <CollectionPreview key={id} {...otherCollectionsProps}/>)
+          collections.map(({ id, ...otherCollectionsProps }) => <CollectionPreview
+            key={id} {...otherCollectionsProps}/>)
         }
       </div>
-    )
+    );
   }
 }
 
