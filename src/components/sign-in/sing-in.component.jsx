@@ -1,6 +1,7 @@
 import React from 'react';
 
 import FormInput from '../form-input/form-input.component';
+import CustomButton from '../custom-button/custom-button.component';
 
 import './sing-in.styles.scss';
 
@@ -29,7 +30,7 @@ class SignIn extends React.PureComponent {
   render() {
     return (
       <div className='sign-in'>
-        <h2>I already have account</h2>
+        <h2 className='title'>I already have account</h2>
         <p>Sign in with your email and password</p>
 
         <form onSubmit={this._handleSubmit}>
@@ -53,7 +54,7 @@ class SignIn extends React.PureComponent {
             required
           />
 
-          <input type="submit" value='Submit Form'/>
+          <CustomButton type="submit">Sign in</CustomButton>
         </form>
       </div>
     );
