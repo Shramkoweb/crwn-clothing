@@ -56,9 +56,11 @@ class SignIn extends React.PureComponent {
             required
           />
 
-          <CustomButton type="submit">Sign in</CustomButton>
-          {' '}
-          <CustomButton type='button' onClick={signInWithGoogle}>Sign in google</CustomButton>
+
+          <div className="buttons">
+            <CustomButton type="submit">Sign in</CustomButton>
+            <CustomButton isGoogleSignIn type='button' onClick={signInWithGoogle}>Sign in google</CustomButton>
+          </div>
         </form>
       </div>
     );
