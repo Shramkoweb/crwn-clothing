@@ -10,15 +10,12 @@ import Signing from './pages/signing/signing.component';
 import { auth } from './firebase/firebase.util';
 
 class App extends React.PureComponent {
-  unsubscribeFromAuth = null;
-
   constructor(props) {
     super(props);
 
     this.state = {
       currentUser: null
     };
-
   }
 
   componentDidMount() {
@@ -32,14 +29,14 @@ class App extends React.PureComponent {
 
   componentWillUnmount() {
     this.unsubscribeFromAuth();
-
-    console.log('unsubscribeFromAuth');
   }
 
   render() {
+    const { currentUser } = this.state;
+
     return (
       <div>
-        <Header currentUser={this.state.currentUser}/>
+        <Header currentUser={currentUser}/>
         <Switch>
           <Route exact path='/' component={HomePage}/>
           <Route exact path='/shop' component={Shop}/>
