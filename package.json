@@ -1,6 +1,6 @@
 {
-  "name": "complete-react-course",
-  "version": "0.1.0",
+  "name": "crwn-react-shop",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "firebase": "^7.9.1",
