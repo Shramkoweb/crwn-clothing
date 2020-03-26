@@ -1,4 +1,7 @@
 Demo: https://crwn-shop.netlify.com/
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/fd3d29abddfa76f09368/maintainability)](https://codeclimate.com/github/Shramkoweb/crwn-clothing/maintainability)
+
 # Used technologies
 
 Build a massive E-commerce app with Redux, Hooks, GraphQL, ContextAPI, Stripe, Firebase:
