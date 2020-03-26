@@ -31,6 +31,10 @@ class App extends React.PureComponent {
             }
           })
         })
+      } else {
+        this.setState({
+          currentUser: userAuth
+        })
       }
     });
   }
