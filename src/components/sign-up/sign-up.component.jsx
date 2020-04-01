@@ -80,6 +80,7 @@ class SignUp extends React.PureComponent {
           <FormInput
             type='password'
             name='password'
+            minLength={6}
             value={password}
             onChange={this.handleChange}
             label='Password'
