@@ -1,6 +1,6 @@
 {
   "name": "crwn-react-shop",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "private": true,
   "dependencies": {
     "firebase": "^7.9.1",
