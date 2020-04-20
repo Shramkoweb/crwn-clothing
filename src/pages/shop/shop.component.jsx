@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SHOP_DATA from '../../shop-data';
+import SHOP_DATA from '../../mocks/shop-data';
 import CollectionPreview from '../../components/collection-preview/collection-preview.component';
 
 class Shop extends React.PureComponent {
@@ -8,7 +8,7 @@ class Shop extends React.PureComponent {
     super(props);
 
     this.state = {
-      collections: SHOP_DATA
+      collections: SHOP_DATA,
     };
   }
 

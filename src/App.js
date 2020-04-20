@@ -36,7 +36,7 @@ class App extends React.PureComponent {
 
   render() {
     const { currentUser } = this.props;
-    console.log(currentUser);
+
     return (
       <>
         <Header/>
