@@ -62,6 +62,7 @@ class SignUp extends React.PureComponent {
         <span>Sign up with your email and password</span>
         <form className='sign-up-form' onSubmit={this.handleSubmit}>
           <FormInput
+            autoComplete='nickname'
             type='text'
             name='displayName'
             value={displayName}
@@ -70,6 +71,7 @@ class SignUp extends React.PureComponent {
             required
           />
           <FormInput
+            autoComplete='email'
             type='email'
             name='email'
             value={email}
@@ -78,6 +80,7 @@ class SignUp extends React.PureComponent {
             required
           />
           <FormInput
+            autoComplete='new-password'
             type='password'
             name='password'
             minLength={6}
@@ -87,6 +90,7 @@ class SignUp extends React.PureComponent {
             required
           />
           <FormInput
+            autoComplete='new-password'
             type='password'
             minLength={6}
             name='confirmPassword'

@@ -46,8 +46,9 @@ class SignIn extends React.PureComponent {
 
         <form onSubmit={this._handleSubmit}>
           <FormInput
+            autoComplete='email'
             handleChange={this.handleChange}
-            type="email"
+            type='email'
             id='email'
             name='email'
             label='email'
@@ -56,6 +57,7 @@ class SignIn extends React.PureComponent {
           />
 
           <FormInput
+            autoComplete='current-password'
             handleChange={this.handleChange}
             type="password"
             id='password'
