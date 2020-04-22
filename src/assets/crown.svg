@@ -1,7 +1,7 @@
-<svg width="50px" height="39px" xmlns="http://www.w3.org/2000/svg">
-    <g transform="translate(-90.000000, -38.000000) translate(90.000000, 38.000000)" fill="none" fill-rule="evenodd">
-        <path fill="#808282" d="M3 14L25 26.5 47 14 40.855176 39 9.08421785 39z"/>
-        <path fill-opacity="0.262838724" fill="#101A1A" d="M25 8L40 39 10 39z"/>
+<svg width="50" height="39" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#808282" d="M3 14l22 12.5L47 14l-6.144824 25H9.08421785z"/>
+        <path fill-opacity=".26283872" fill="#101A1A" d="M25 8l15 31H10z"/>
         <circle fill="#5E6363" cx="2" cy="9" r="2"/>
         <circle fill="#5E6363" cx="25" cy="2" r="2"/>
         <circle fill="#5E6363" cx="48" cy="9" r="2"/>
