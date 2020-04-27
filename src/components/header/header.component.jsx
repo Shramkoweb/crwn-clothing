@@ -10,7 +10,7 @@ import { ReactComponent as Logo } from '../../assets/crown.svg';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart/cart.component';
 
-const Header = ({ currentUser, cartHidden, toggleCart }) => (
+const Header = ({ currentUser, cartHidden }) => (
   <div className="header">
     <Link to='/' className='logo-container'>
       <Logo title='CRWN Magazine' className='logo'/>
@@ -27,7 +27,7 @@ const Header = ({ currentUser, cartHidden, toggleCart }) => (
           :
           <Link className='option' to='/signing'>SIGN IN</Link>
       }
-      <CartIcon toggleCart={toggleCart}/>
+      <CartIcon/>
     </div>
 
     {!cartHidden && <CartDropdown/>}
