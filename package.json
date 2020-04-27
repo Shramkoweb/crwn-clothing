@@ -1,9 +1,8 @@
 {
   "name": "crwn-react-shop",
-  "version": "0.2.4",
+  "version": "0.2.3",
   "private": true,
   "dependencies": {
-    "classnames": "^2.2.6",
     "firebase": "^7.9.1",
     "node-sass": "^4.13.1",
     "react": "^16.8.6",
@@ -28,5 +27,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "classnames": "^2.2.6"
+  }
 }
