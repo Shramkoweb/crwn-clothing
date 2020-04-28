@@ -18,3 +18,13 @@ export const getCartHiddenState = createSelector(
   [getCart],
   (cart) => cart.hidden
 );
+
+export const getCartTotal = createSelector(
+  [getCartItems],
+  cartItems =>
+    cartItems.reduce(
+      (accumulatedPrice, cartItem) =>
+        accumulatedPrice + cartItem.quantity * cartItem.price,
+      0
+    )
+);

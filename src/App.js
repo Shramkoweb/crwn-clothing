@@ -9,8 +9,9 @@ import { setCurrentUser } from './redux/user/user.actions';
 import { getCurrentUser } from './redux/user/user.selectors';
 import Header from './components/header/header.component';
 import HomePage from './pages/homepage/homepage.component';
-import Shop from './pages/shop/shop.component';
-import Signing from './pages/signing/signing.component';
+import ShopPage from './pages/shop/shop.component';
+import CheckoutPage from './pages/checkout/checkout.component';
+import SigningPage from './pages/signing/signing.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.util';
 
 class App extends React.PureComponent {
@@ -44,10 +45,11 @@ class App extends React.PureComponent {
         <Header/>
         <Switch>
           <Route exact path='/' component={HomePage}/>
-          <Route exact path='/shop' component={Shop}/>
+          <Route exact path='/shop' component={ShopPage}/>
+          <Route exact path='/checkout' component={CheckoutPage}/>
           <Route exact path='/signing' render={() => currentUser
             ? <Redirect to='/'/>
-            : <Signing/>}
+            : <SigningPage/>}
           />
         </Switch>
       </>
