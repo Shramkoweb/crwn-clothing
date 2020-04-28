@@ -13,3 +13,8 @@ export const getCartItemsAmount = createSelector(
     return items.reduce((acc, currentItem) => acc + currentItem.quantity, 0);
   }
 );
+
+export const getCartHiddenState = createSelector(
+  [getCart],
+  (cart) => cart.hidden
+);
