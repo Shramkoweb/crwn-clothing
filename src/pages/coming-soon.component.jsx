@@ -5,7 +5,10 @@ const ComingSoonComponent = () => {
   return (
     <div>
       <div>
-        <h3>Coming soon... 😀</h3>
+        <h3>
+          Coming soon...
+          <span role="img" aria-label="smile emoji">😀</span>
+        </h3>
       </div>
     </div>
   );
