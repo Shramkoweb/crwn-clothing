@@ -13,6 +13,7 @@ import ShopPage from './pages/shop/shop.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 import SigningPage from './pages/signing/signing.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.util';
+import ComingSoonComponent from './pages/coming-soon.component';
 
 class App extends React.PureComponent {
   componentDidMount() {
@@ -51,6 +52,7 @@ class App extends React.PureComponent {
             ? <Redirect to='/'/>
             : <SigningPage/>}
           />
+          <Route component={ComingSoonComponent} />
         </Switch>
       </>
     );

@@ -18,14 +18,14 @@ export const sectionsData = [
     linkUrl: ''
   },
   {
-    title: 'womens',
+    title: 'women\'s',
     imageUrl: '/images/womens.png',
     size: 'large',
     id: 4,
     linkUrl: ''
   },
   {
-    title: 'mens',
+    title: 'men\'s',
     imageUrl: '/images/men.png',
     size: 'large',
     id: 5,
