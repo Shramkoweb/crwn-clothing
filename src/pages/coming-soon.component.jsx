@@ -1,7 +1,8 @@
 import React from 'react';
 
 //TODO temporary
-const ComingSoonComponent = () => {
+const ComingSoonComponent = (props) => {
+  console.log(props);
   return (
     <div>
       <div>
