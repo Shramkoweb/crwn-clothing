@@ -6,12 +6,11 @@ import './shop.styles.scss';
 import CollectionOverview from '../../components/collection-overview/collection-overview.component';
 import Collection from '../collection/collection.component';
 
-const Shop = ({ match, location }) => {
-  console.log(match, location);
+const Shop = ({ match }) => {
   return (
     <div className='shop-page'>
-      <Route exact path={`${match.path}`} component={CollectionOverview} />
-      <Route exact path={`${match.path}/:collectionId`} component={Collection} />
+      <Route exact path={`${match.path}`} component={CollectionOverview}/>
+      <Route exact path={`${match.path}/:collectionId`} component={Collection}/>
     </div>
   );
 };
