@@ -33,7 +33,6 @@ class App extends React.PureComponent {
     });
   }
 
-
   componentWillUnmount() {
     this.unsubscribeFromAuth();
   }
@@ -52,7 +51,7 @@ class App extends React.PureComponent {
             ? <Redirect to='/'/>
             : <SigningPage/>}
           />
-          <Route component={ComingSoonComponent} />
+          <Route component={ComingSoonComponent}/>
         </Switch>
       </>
     );

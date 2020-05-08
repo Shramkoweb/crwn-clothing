@@ -3,7 +3,7 @@ import cls from 'classnames';
 
 import './custom-button.styles.scss';
 
-const CustomButton = ({ children, isGoogleSignIn, inverted,  ...otherButtonProps }) => {
+const CustomButton = ({ children, isGoogleSignIn, inverted, ...otherButtonProps }) => {
   const componentClassName = cls('custom-button', {
     'google-sign-in': isGoogleSignIn,
     'inverted': inverted,
