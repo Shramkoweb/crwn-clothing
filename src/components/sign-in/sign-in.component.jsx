@@ -1,12 +1,13 @@
 import React from 'react';
 
-import './sign-in.styles.scss';
-
-import { auth, signInWithGoogle } from '../../firebase/firebase.util';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
-class SignIn extends React.PureComponent {
+import { auth, signInWithGoogle } from '../../firebase/firebase.util';
+
+import { ButtonsBarContainer, SignInContainer, SignInTitle } from './sign-in.styles';
+
+class SignIn extends React.Component {
   constructor(props) {
     super(props);
 
@@ -17,8 +18,8 @@ class SignIn extends React.PureComponent {
     };
   }
 
-  _handleSubmit = async (evt) => {
-    evt.preventDefault();
+  handleSubmit = async (event) => {
+    event.preventDefault();
 
     const { email, password } = this.state;
 
@@ -27,7 +28,6 @@ class SignIn extends React.PureComponent {
       this.setState({ email: '', password: '', errorMessage: '' });
     } catch (error) {
       this.setState({ errorMessage: error.message });
-      console.error(error);
     }
   };
 
@@ -39,41 +39,40 @@ class SignIn extends React.PureComponent {
 
   render() {
     return (
-      <div className='sign-in'>
-        <h2 className='title'>I already have account</h2>
+      <SignInContainer>
+        <SignInTitle>I already have an account</SignInTitle>
         <p>Sign in with your email and password</p>
 
-        <form onSubmit={this._handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <FormInput
             autoComplete='email'
-            handleChange={this.handleChange}
-            type='email'
             id='email'
             name='email'
-            label='email'
+            type='email'
+            handleChange={this.handleChange}
             value={this.state.email}
+            label='email'
             required
           />
-
           <FormInput
             autoComplete='current-password'
             handleChange={this.handleChange}
-            type="password"
             id='password'
             name='password'
-            label='password'
+            type='password'
             value={this.state.password}
+            label='password'
             required
           />
-
           <p>{this.state.errorMessage}</p>
-
-          <div className="buttons">
-            <CustomButton type="submit">Sign in</CustomButton>
-            <CustomButton isGoogleSignIn type='button' onClick={signInWithGoogle}>Sign in google</CustomButton>
-          </div>
+          <ButtonsBarContainer>
+            <CustomButton type='submit'> Sign in </CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+              Sign in with Google
+            </CustomButton>
+          </ButtonsBarContainer>
         </form>
-      </div>
+      </SignInContainer>
     );
   }
 }
