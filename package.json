@@ -1,11 +1,9 @@
 {
   "name": "crwn-react-shop",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "private": true,
   "dependencies": {
-    "classnames": "^2.2.6",
     "firebase": "^7.9.1",
-    "node-sass": "^4.13.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.2.0",

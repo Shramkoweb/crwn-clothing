@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import './App.scss';
+import './App.css';
 
 import { setCurrentUser } from './redux/user/user.actions';
 import { getCurrentUser } from './redux/user/user.selectors';
