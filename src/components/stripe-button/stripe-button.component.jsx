@@ -2,7 +2,7 @@ import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import CustomButton from '../custom-button/custom-button.component';
 
-const StripeButton = ({total}) => {
+const StripeButton = ({ total }) => {
   const PUBLISHABLE_KEY = 'pk_test_euVEzbkCGMGdNy44Rg1ji1mD00osdWPX2r';
 
   const onToken = (token) => {

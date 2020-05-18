@@ -11,7 +11,7 @@ const CartItem = ({ item }) => {
         <span className='name'>
           {name}
         </span>
-        <span  className='price'>
+        <span className='price'>
           {quantity} x ${price}
         </span>
       </ItemDetails>
