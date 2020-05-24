@@ -15,5 +15,5 @@ export const getCollection = (collectionID) => {
 
 export const getCollectionsForPreview = createSelector(
   [getCollections],
-  (collections) => Object.values(collections)
+  (collections) => collections ? Object.values(collections) : []
 );
