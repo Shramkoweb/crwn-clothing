@@ -10,7 +10,7 @@ export const getCollections = createSelector(
 export const getCollection = (collectionID) => {
   return createSelector(
     [getCollections],
-    (collections) => collections[collectionID]);
+    (collections) => collections ? collections[collectionID] : null);
 };
 
 export const getCollectionsForPreview = createSelector(
