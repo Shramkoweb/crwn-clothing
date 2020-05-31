@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, {css} from 'styled-components';
 
 
 const defaultStyles = css`
@@ -34,7 +34,7 @@ const googleStyles = css`
 `;
 
 const getButtonStyles = (props) => {
-  const { isGoogleSignIn, inverted } = props;
+  const {isGoogleSignIn, inverted} = props;
 
   if (isGoogleSignIn) {
     return googleStyles;

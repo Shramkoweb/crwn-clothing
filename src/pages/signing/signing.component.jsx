@@ -2,13 +2,13 @@ import React from 'react';
 
 import SignIn from '../../components/sign-in/sign-in.component';
 import SignUp from '../../components/sign-up/sign-up.component';
-import { SigningContainer } from './signing.styles';
+import {SigningContainer} from './signing.styles';
 
 const Signing = () => (
-  <SigningContainer>
-    <SignIn/>
-    <SignUp/>
-  </SigningContainer>
+    <SigningContainer>
+      <SignIn/>
+      <SignUp/>
+    </SigningContainer>
 );
 
 export default Signing;
