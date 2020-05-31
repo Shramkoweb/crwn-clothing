@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {addItem} from '../../redux/cart/cart.actions';
@@ -9,25 +10,24 @@ import {
 } from './collection-item.styles';
 
 const CollectionItem = ({item, addItem}) => {
-
   const {name, price, imageUrl} = item;
 
   return (
-      <CollectionItemContainer>
-        <BackgroundImage imageUrl={imageUrl}/>
+    <CollectionItemContainer>
+      <BackgroundImage imageUrl={imageUrl}/>
 
-        <CollectionFooterContainer>
-          <span>{name}</span>
-          <span>{price}</span>
-        </CollectionFooterContainer>
+      <CollectionFooterContainer>
+        <span>{name}</span>
+        <span>{price}</span>
+      </CollectionFooterContainer>
 
-        <AddButton
-            onClick={() => addItem(item)}
-            inverted
-        >
-          Add to cart
-        </AddButton>
-      </CollectionItemContainer>
+      <AddButton
+        onClick={() => addItem(item)}
+        inverted
+      >
+        Add to cart
+      </AddButton>
+    </CollectionItemContainer>
   );
 };
 
@@ -36,3 +36,8 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(null, mapDispatchToProps)(CollectionItem);
+
+CollectionItem.propTypes = {
+  addItem: PropTypes.func,
+  item: PropTypes.object,
+};

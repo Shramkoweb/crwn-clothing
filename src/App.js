@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
@@ -55,6 +56,11 @@ class App extends React.PureComponent {
     );
   }
 }
+
+App.propTypes = {
+  currentUser: PropTypes.object,
+  setCurrentUser: PropTypes.func,
+};
 
 const mapStateToProps = createStructuredSelector({
   currentUser: getCurrentUser,

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {Route} from 'react-router-dom';
 import {createStructuredSelector} from 'reselect';
@@ -27,22 +28,22 @@ class Shop extends React.PureComponent {
 
     if (error) {
       return (
-          <div>
-            <h2>{error}</h2>
-          </div>
+        <div>
+          <h2>{error}</h2>
+        </div>
       );
     }
 
     // TODO try refactor isFetching & isLoaded
     return (
-        <div className='shop-page'>
-          <Route exact
-                 path={`${match.path}`}
-                 render={(props) => <CollectionOverviewWithSpinner isLoading={isFetching} {...props} />}/>
-          <Route exact
-                 path={`${match.path}/:collectionId`}
-                 render={(props) => <CollectionWithSpinner isLoading={!isLoaded} {...props} />}/>
-        </div>
+      <div className='shop-page'>
+        <Route exact
+               path={`${match.path}`}
+               render={(props) => <CollectionOverviewWithSpinner isLoading={isFetching} {...props} />}/>
+        <Route exact
+               path={`${match.path}/:collectionId`}
+               render={(props) => <CollectionWithSpinner isLoading={!isLoaded} {...props} />}/>
+      </div>
     );
   }
 }
@@ -58,3 +59,11 @@ const mapDispatchToProps = (disaptch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Shop);
+
+Shop.propTypes = {
+  error: PropTypes.string,
+  fetchCollectionsStartAsync: PropTypes.func,
+  isFetching: PropTypes.bool,
+  isLoaded: PropTypes.bool,
+  match: PropTypes.object,
+};

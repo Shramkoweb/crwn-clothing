@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MenuItemContainer = styled.div`
-	height: ${({size}) => (size ? '380px' : '240px')};
+height: ${({size}) => (size ? '380px' : '240px')};
   min-width: 30%;
   flex: 1 1 auto;
   display: flex;
@@ -11,20 +11,20 @@ export const MenuItemContainer = styled.div`
   margin: 0 7.5px 15px;
   overflow: hidden;
 
-	&:hover {
-		cursor: pointer;
+  &:hover {
+  cursor: pointer;
 
-		& .background-image {
-			transform: scale(1.1);
-			transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-		}
+    & .background-image {
+      transform: scale(1.1);
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
 
-		& .content {
-			opacity: 0.9;
-		}
-	}
+    & .content {
+      opacity: 0.9;
+    }
+  }
 
-	&:first-child {
+  &:first-child {
     margin-right: 7.5px;
   }
 

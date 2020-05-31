@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
@@ -8,12 +9,12 @@ import {CollectionsOverviewContainer} from './collections-overview.styles';
 
 const CollectionOverview = ({collections}) => {
   return (
-      <CollectionsOverviewContainer>
-        {
-          collections.map(({id, ...otherCollectionsProps}) => <CollectionPreview
-              key={id} {...otherCollectionsProps}/>)
-        }
-      </CollectionsOverviewContainer>
+    <CollectionsOverviewContainer>
+      {
+        collections.map(({id, ...otherCollectionsProps}) => <CollectionPreview
+          key={id} {...otherCollectionsProps}/>)
+      }
+    </CollectionsOverviewContainer>
   );
 };
 
@@ -22,3 +23,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 export default connect(mapStateToProps)(CollectionOverview);
+
+CollectionOverview.propTypes = {
+  collections: PropTypes.array,
+};
