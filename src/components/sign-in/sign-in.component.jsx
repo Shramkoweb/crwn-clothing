@@ -16,9 +16,12 @@ class SignIn extends React.Component {
       password: '',
       errorMessage: '',
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleSubmit = async (event) => {
+  async handleSubmit(event) {
     event.preventDefault();
 
     const {email, password} = this.state;
@@ -29,50 +32,50 @@ class SignIn extends React.Component {
     } catch (error) {
       this.setState({errorMessage: error.message});
     }
-  };
+  }
 
-  handleChange = ({target}) => {
+  handleChange({target}) {
     const {value, name} = target;
 
     this.setState({[name]: value});
-  };
+  }
 
   render() {
     return (
-        <SignInContainer>
-          <SignInTitle>I already have an account</SignInTitle>
-          <p>Sign in with your email and password</p>
+      <SignInContainer>
+        <SignInTitle>I already have an account</SignInTitle>
+        <p>Sign in with your email and password</p>
 
-          <form onSubmit={this.handleSubmit}>
-            <FormInput
-                autoComplete='email'
-                id='email'
-                name='email'
-                type='email'
-                handleChange={this.handleChange}
-                value={this.state.email}
-                label='email'
-                required
-            />
-            <FormInput
-                autoComplete='current-password'
-                handleChange={this.handleChange}
-                id='password'
-                name='password'
-                type='password'
-                value={this.state.password}
-                label='password'
-                required
-            />
-            <p>{this.state.errorMessage}</p>
-            <ButtonsBarContainer>
-              <CustomButton type='submit'> Sign in </CustomButton>
-              <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
-                Sign in with Google
-              </CustomButton>
-            </ButtonsBarContainer>
-          </form>
-        </SignInContainer>
+        <form onSubmit={this.handleSubmit}>
+          <FormInput
+            autoComplete='email'
+            id='email'
+            name='email'
+            type='email'
+            handleChange={this.handleChange}
+            value={this.state.email}
+            label='email'
+            required
+          />
+          <FormInput
+            autoComplete='current-password'
+            handleChange={this.handleChange}
+            id='password'
+            name='password'
+            type='password'
+            value={this.state.password}
+            label='password'
+            required
+          />
+          <p>{this.state.errorMessage}</p>
+          <ButtonsBarContainer>
+            <CustomButton type='submit'> Sign in </CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+              Sign in with Google
+            </CustomButton>
+          </ButtonsBarContainer>
+        </form>
+      </SignInContainer>
     );
   }
 }
