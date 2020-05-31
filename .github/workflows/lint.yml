@@ -22,10 +22,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    - name: install Yarn
+      run: npm install -g yarn
     # Runs a single command using the runners shell
-    - name: npm install
-      run: npm install
+    - name: yarn install
+      run: yarn install
 
     # Runs a set of commands using the runners shell
-    - name: Run linter
+    - name: run linter
       run: npm run lint
