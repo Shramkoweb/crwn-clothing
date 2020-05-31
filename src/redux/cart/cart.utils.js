@@ -1,17 +1,15 @@
 export const addItemToCart = (cartItems, cartItemToAdd) => {
-  //todo refactor to util func
+  // todo refactor to util func
   const hasItemToAdd = cartItems.find((cartItem) => cartItem.id === cartItemToAdd.id);
 
   if (hasItemToAdd) {
     return cartItems.map((cartItem) => {
-        return cartItem.id === cartItemToAdd.id
-          ? { ...cartItem, quantity: cartItem.quantity + 1 }
-          : cartItem;
-      }
+        return cartItem.id === cartItemToAdd.id ? {...cartItem, quantity: cartItem.quantity + 1} : cartItem;
+      },
     );
   }
 
-  return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
+  return [...cartItems, {...cartItemToAdd, quantity: 1}];
 };
 
 export const removeItemFromCart = (cartItems, cartItemToRemove) => {
@@ -22,9 +20,7 @@ export const removeItemFromCart = (cartItems, cartItemToRemove) => {
   }
 
   return cartItems.map((cartItem) => {
-    return cartItem.id === cartItemToRemove.id
-      ? { ...cartItem, quantity: cartItem.quantity - 1 }
-      : cartItem;
+    return cartItem.id === cartItemToRemove.id ? {...cartItem, quantity: cartItem.quantity - 1} : cartItem;
   });
 };
 

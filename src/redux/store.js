@@ -1,12 +1,13 @@
-import { applyMiddleware, createStore } from 'redux';
+import {applyMiddleware, createStore} from 'redux';
 import logger from 'redux-logger';
-import { persistStore } from 'redux-persist';
+import {persistStore} from 'redux-persist';
 import thunk from 'redux-thunk';
 
 import rootReducer from './root-reducer';
 
 const middlewares = [thunk];
 
+// eslint-disable-next-line no-undef
 if (process.env.NODE_ENV === 'development') {
   middlewares.push(logger);
 }
@@ -14,4 +15,4 @@ if (process.env.NODE_ENV === 'development') {
 const store = createStore(rootReducer, applyMiddleware(...middlewares));
 const persistor = persistStore(store);
 
-export { persistor, store };
+export {persistor, store};

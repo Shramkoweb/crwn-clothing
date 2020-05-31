@@ -1,15 +1,15 @@
-import { createSelector } from 'reselect';
+import {createSelector} from 'reselect';
 
 export const getShop = (state) => state.shop;
 
 export const getCollections = createSelector(
   [getShop],
-  (shop) => shop.collections
+  (shop) => shop.collections,
 );
 
 export const getIsCollectionsFetching = createSelector(
   [getShop],
-  (shop) => shop.isFetching
+  (shop) => shop.isFetching,
 );
 
 export const getIsCollectionsHasError = createSelector(
@@ -25,10 +25,10 @@ export const getCollection = (collectionID) => {
 
 export const getCollectionsForPreview = createSelector(
   [getCollections],
-  (collections) => collections ? Object.values(collections) : []
+  (collections) => collections ? Object.values(collections) : [],
 );
 
 export const getIsCollectionsLoaded = createSelector(
   [getShop],
-  (shop) => !!shop.collections
+  (shop) => !!shop.collections,
 );
