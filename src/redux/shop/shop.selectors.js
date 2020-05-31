@@ -31,4 +31,4 @@ export const getCollectionsForPreview = createSelector(
 export const getIsCollectionsLoaded = createSelector(
   [getShop],
   (shop) => !!shop.collections
-)
+);
