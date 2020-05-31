@@ -5,10 +5,10 @@ import SignUp from '../../components/sign-up/sign-up.component';
 import {SigningContainer} from './signing.styles';
 
 const Signing = () => (
-    <SigningContainer>
-      <SignIn/>
-      <SignUp/>
-    </SigningContainer>
+  <SigningContainer>
+    <SignIn/>
+    <SignUp/>
+  </SigningContainer>
 );
 
 export default Signing;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
@@ -8,11 +9,11 @@ import {DirectoryMenuContainer} from './directory.styles';
 
 const Directory = ({sections}) => {
   return (
-      <DirectoryMenuContainer>
-        {sections.map(({id, ...menuItemProps}) => (
-            <MenuItem key={id} {...menuItemProps}/>
-        ))}
-      </DirectoryMenuContainer>
+    <DirectoryMenuContainer>
+      {sections.map(({id, ...menuItemProps}) => (
+        <MenuItem key={id} {...menuItemProps}/>
+      ))}
+    </DirectoryMenuContainer>
   );
 };
 
@@ -21,3 +22,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 export default connect(mapStateToProps)(Directory);
+
+Directory.propTypes = {
+  sections: PropTypes.array,
+};

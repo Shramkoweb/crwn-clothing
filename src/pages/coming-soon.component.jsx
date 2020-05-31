@@ -1,17 +1,16 @@
 import React from 'react';
 
-//TODO temporary
+// TODO temporary
 const ComingSoonComponent = (props) => {
-  console.log(props);
   return (
+    <div>
       <div>
-        <div>
-          <h3>
-            Coming soon...
-            <span role="img" aria-label="smile emoji">😀</span>
-          </h3>
-        </div>
+        <h3>
+          Coming soon...
+          <span role="img" aria-label="smile emoji">😀</span>
+        </h3>
       </div>
+    </div>
   );
 };
 

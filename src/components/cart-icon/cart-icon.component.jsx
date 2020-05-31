@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
 
@@ -8,10 +9,10 @@ import {CartContainer, ItemCountContainer, ShoppingIcon} from './cart-icon.style
 
 const CartIcon = ({toggleCartHidden, itemsAmount}) => {
   return (
-      <CartContainer type='button' onClick={toggleCartHidden}>
-        <ShoppingIcon/>
-        <ItemCountContainer>{itemsAmount}</ItemCountContainer>
-      </CartContainer>
+    <CartContainer type='button' onClick={toggleCartHidden}>
+      <ShoppingIcon/>
+      <ItemCountContainer>{itemsAmount}</ItemCountContainer>
+    </CartContainer>
   );
 };
 
@@ -22,5 +23,10 @@ const mapStateToProps = createStructuredSelector({
 const mapDispatchToProps = (dispatch) => ({
   toggleCartHidden: () => dispatch(toggleCartHidden()),
 });
+
+CartIcon.propTypes = {
+  toggleCartHidden: PropTypes.func,
+  itemsAmount: PropTypes.number,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);

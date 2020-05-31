@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
@@ -12,27 +13,26 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import {HeaderContainer, LogoContainer, OptionLink, OptionsContainer} from './header.styles';
 
 const Header = ({currentUser, cartHidden}) => (
-    <HeaderContainer>
-      <LogoContainer to='/'>
-        <Logo title='CRWN Magazine' className='logo'/>
-      </LogoContainer>
+  <HeaderContainer>
+    <LogoContainer to='/'>
+      <Logo title='CRWN Magazine' className='logo'/>
+    </LogoContainer>
 
-      <OptionsContainer>
-        <OptionLink to='/shop'>SHOP</OptionLink>
-        <OptionLink to='/contact'>CONTACT</OptionLink>
-        {
-          currentUser ?
-              <OptionLink to='/' onClick={() => auth.signOut()}>
-                SIGN OUT
-              </OptionLink>
-              :
-              <OptionLink to='/signing'>SIGN IN</OptionLink>
-        }
-        <CartIcon/>
-      </OptionsContainer>
+    <OptionsContainer>
+      <OptionLink to='/shop'>SHOP</OptionLink>
+      <OptionLink to='/contact'>CONTACT</OptionLink>
+      {
+        currentUser ?
+          <OptionLink to='/' onClick={() => auth.signOut()}>
+            SIGN OUT
+          </OptionLink> :
+          <OptionLink to='/signing'>SIGN IN</OptionLink>
+      }
+      <CartIcon/>
+    </OptionsContainer>
 
-      {!cartHidden && <CartDropdown/>}
-    </HeaderContainer>
+    {!cartHidden && <CartDropdown/>}
+  </HeaderContainer>
 );
 
 const mapStateToProps = createStructuredSelector({
@@ -41,3 +41,8 @@ const mapStateToProps = createStructuredSelector({
 });
 
 export default connect(mapStateToProps)(Header);
+
+Header.propTypes = {
+  cartHidden: PropTypes.bool,
+  currentUser: PropTypes.object,
+};
