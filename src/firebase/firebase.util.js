@@ -54,6 +54,11 @@ export const addCollectionsAndDocuments = async (collectionKey, objectsToAdd) =>
 };
 
 export const convertCollectionsSnapshotToMap = (collections) => {
+  // throw error if we had empty collections or offline
+  if (collections.empty) {
+    throw new Error('Empty collections or you are offline')
+  }
+
   const transformedCollection = collections.docs.map(doc => {
     const { title, items } = doc.data();
 
