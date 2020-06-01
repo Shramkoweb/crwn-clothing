@@ -18,5 +18,7 @@ plugins:
 rules: {
   require-jsdoc: 'off',
   max-len: 'off',
-  indent: 'off'
+  indent: 'off',
+  new-cap: off,
 }
+
