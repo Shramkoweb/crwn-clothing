@@ -1,4 +1,4 @@
-Demo: https://crwn-shop.netlify.com/
+Demo(WIP): https://crwn-shop.netlify.com/
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/fd3d29abddfa76f09368/maintainability)](https://codeclimate.com/github/Shramkoweb/crwn-clothing/maintainability)
 [![GitHub release](https://img.shields.io/github/package-json/v/Shramkoweb/crwn-clothing)](https://GitHub.com/Shramkoweb/crwn-clothing)
