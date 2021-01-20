@@ -41,11 +41,11 @@ export const createUserProfileDocument = async (userAuth, additionalUserInfo) =>
 };
 
 export const addCollectionsAndDocuments = async (collectionKey, objectsToAdd) => {
-  const collecctionRef = firestore.collection(collectionKey);
+  const collectionRef = firestore.collection(collectionKey);
   const batch = firestore.batch();
 
   objectsToAdd.forEach((item) => {
-    const newDocRef = collecctionRef.doc();
+    const newDocRef = collectionRef.doc();
 
     batch.set(newDocRef, item);
   });
