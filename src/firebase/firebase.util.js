@@ -3,14 +3,14 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-  apiKey: 'AIzaSyBid9mxl4bYGvqKnHiV8A0E-KnMJkWAuSg',
-  authDomain: 'crwn-clothes-43972.firebaseapp.com',
-  databaseURL: 'https://crwn-clothes-43972.firebaseio.com',
-  projectId: 'crwn-clothes-43972',
-  storageBucket: 'crwn-clothes-43972.appspot.com',
-  messagingSenderId: '637544235873',
-  appId: '1:637544235873:web:110a4d2b07c747f456fb20',
-  measurementId: 'G-WDVMZSRNWJ',
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE,
+  messagingSenderId: process.env.REACT_APP_MESSAGE,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT,
 };
 
 export const createUserProfileDocument = async (userAuth, additionalUserInfo) => {
