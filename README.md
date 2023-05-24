@@ -38,3 +38,5 @@ Build a massive E-commerce app with Redux, Hooks, GraphQL, ContextAPI, Stripe, F
 - React Design Patterns
 
 - Testing with Jest, Enzyme and Snapshot testing
+
+Created by [Serhii Shramko](https://shramko.dev/). This is my personal website and blog. 
